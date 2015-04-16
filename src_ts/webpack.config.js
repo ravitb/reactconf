@@ -3,7 +3,7 @@ module.exports = {
     entry: './app.ts',
     output: {
         filename: 'bundle.js',
-        publicPath: '/build/'
+        path: 'src_ts'
     },
     resolve: {
         extensions: ['', '.ts', '.js' ]

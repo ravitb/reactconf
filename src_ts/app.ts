@@ -36,25 +36,23 @@ class App extends React.Component<any, State, any> {
 	}
 
 	render() {
-		return React.jsx(`<div className="app">
-			<div className="title">Picture Purrfect</div>
-			<ImageViewer index={this.state.photoIndex} />
-			<div>
-				<button 
-					disabled={this.state.photoIndex == 0} 
-					onClick={this.handleChange.bind(this, -1)}>Previous</button>
-
-				<input type="text"
-          value={this.state.inputText}
-          onChange={e => this.setState({inputText: e.target.value})}
-					onKeyPress={this.handleKeyPress.bind(this)} />
-
-				<button 
-					disabled={this.state.photoIndex == 2} 
-					onClick={this.handleChange.bind(this, 1)}>Next</button>
-			</div>
-		</div>`)
+		return React.jsx('<div className="app">' +
+		'			<div className="title">Picture Purrfect</div>' +
+		'			<ImageViewer index={this.state.photoIndex} />' +
+		'			<div>' +
+		'				<button' +
+		'					disabled={this.state.photoIndex == 0}' +
+		'					onClick={this.handleChange.bind(this, -1)}>Previous</button>' +
+		'				<input type="text"' +
+		'          value={this.state.inputText}' +
+		'          onChange={e => this.setState({inputText: e.target.value})}' +
+		'					onKeyPress={this.handleKeyPress.bind(this)} />' +
+		'				<button' +
+		'					disabled={this.state.photoIndex == 2}' +
+		'					onClick={this.handleChange.bind(this, 1)}>Next</button>' +
+		'			</div>' +
+		'		</div>')
 	}
 }
 
-React.render(React.jsx(`<App />`), document.body);
+React.render(React.jsx('<App />'), document.body);
